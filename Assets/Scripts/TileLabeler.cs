@@ -64,6 +64,9 @@ public class TileLabeler : MonoBehaviour
         coordinates.x = Mathf.RoundToInt(transform.position.x / UnityEditor.EditorSnapSettings.move.x);
         coordinates.y = Mathf.RoundToInt(transform.position.z / UnityEditor.EditorSnapSettings.move.z);
         name = $"Tile ({coordinates.x}, {coordinates.y})";
+        
+        var s = 0;
+
         if (label)
         {
             label.text = $"{coordinates.x}, {coordinates.y}";
