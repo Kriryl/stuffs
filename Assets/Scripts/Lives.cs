@@ -7,6 +7,7 @@ using TMPro;
 public class Lives : MonoBehaviour
 {
     [SerializeField] private int lives = 3;
+    [SerializeField] private float winTime = 300f;
     [SerializeField] private TextMeshProUGUI livesText;
 
     [SerializeField] private Canvas loseScreen;
@@ -35,22 +36,45 @@ public class Lives : MonoBehaviour
 
     private void Update()
     {
+        CheckWinCondition();
         if (livesText)
         {
-            if (TotalLives == 1)
-            {
-                livesText.text = $"{lives} life remaining";
-            }
-            else
-            {
-                livesText.text = $"{lives} lives remaining";
-            }
+            DisplayLives();
+        }
+        CheckLives();
+    }
+
+    private void CheckWinCondition()
+    {
+        if (Time.timeSinceLevelLoad >= winTime)
+        {
+            Win();
         }
     }
 
-    public void PrepareToLose()
+    private void DisplayLives()
     {
-        Lose();
+        if (TotalLives == 1)
+        {
+            livesText.text = $"{lives} life remaining";
+        }
+        else
+        {
+            livesText.text = $"{lives} lives remaining";
+        }
+    }
+
+    private void CheckLives()
+    {
+        if (TotalLives <= 0)
+        {
+            Lose();
+        }
+    }
+
+    private void Win()
+    {
+        print("You Won!");
     }
 
     public void Lose()

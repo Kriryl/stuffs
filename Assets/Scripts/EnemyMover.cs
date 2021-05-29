@@ -48,15 +48,6 @@ public class EnemyMover : MonoBehaviour
             }
         }
         lives.TotalLives--;
-        CheckLives();
         gameObject.SetActive(false);
-    }
-
-    private void CheckLives()
-    {
-        if (lives.TotalLives <= 0)
-        {
-            lives.PrepareToLose();
-        }
     }
 }

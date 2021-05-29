@@ -32,7 +32,7 @@ public class BestScoreDisplayer : MonoBehaviour
         }
         else if (scoreType == ScoreType.bestTimeAlive)
         {
-            textMesh.text = $"High score: {Mathf.Round(PlayerPrefs.GetFloat(ScoreSaver.HIGH_SCORE_TIME_ALIVE) * 10f / 10)}";
+            textMesh.text = $"Best time: {Mathf.Round(PlayerPrefs.GetFloat(ScoreSaver.HIGH_SCORE_TIME_ALIVE) * 10f / 10f)} seconds";
         }
     }
 }
