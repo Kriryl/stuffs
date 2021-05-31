@@ -32,6 +32,7 @@ public class Lives : MonoBehaviour
         print($"TOTAL DAMAGE = {PlayerPrefs.GetFloat(ScoreSaver.HIGH_SCORE_DAMAGE)}");
         print(PlayerPrefs.GetInt(ScoreSaver.HIGH_SCORE_KILLS));
         print(PlayerPrefs.GetFloat(ScoreSaver.HIGH_SCORE_TIME_ALIVE));
+        Time.timeScale = 1f;
     }
 
     private void Update()

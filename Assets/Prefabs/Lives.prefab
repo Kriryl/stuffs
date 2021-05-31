@@ -2011,7 +2011,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d3067c995cc04a8498a2ab3088a7ddda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 1
+  lives: 3
+  winTime: 300
   livesText: {fileID: 3218975131492488403}
   loseScreen: {fileID: 1907286462453484960}
   damageDone: {fileID: 957912983497074509}
