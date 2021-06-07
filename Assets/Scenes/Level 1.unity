@@ -26835,7 +26835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentSearchNode:
-    coordinates: {x: 0, y: 0}
+    coordinates: {x: 2, y: 1}
     isWalkable: 0
     isExplored: 0
     isPath: 0
