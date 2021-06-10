@@ -20,6 +20,14 @@ public class GridManager : MonoBehaviour
         return grid[coordinates];
     }
 
+    public void BlockNode(Vector2Int coordinate)
+    {
+        if (grid.ContainsKey(coordinate))
+        {
+            grid[coordinate].isWalkable = false;
+        }
+    }
+
     private void CreateGrid()
     {
         for (int x = 0; x < gridSize.x; x++)
